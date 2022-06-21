@@ -115,7 +115,7 @@ public class SimpleCal {
     public static void main(String[] args) {
         // System.out.println("hello");
         Myframe frame = new Myframe();
-        // System.out.println(frame);
+        // System.out.println(frame); 
 
     }
 
