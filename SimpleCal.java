@@ -10,9 +10,9 @@ import java.awt.event.*;
 
 class Myframe extends JFrame implements ActionListener {
     private Container c;
-    private JLabel label1, label2, Result;
-    private JTextField t1, t2, Re;
-    private JButton add, minus, div, mul;
+    private JLabel label1, label2 , Result;
+    private JTextField t1, t2 , Re ;
+    private JButton add , minus , div , mul;
 
     Myframe() {
         setTitle("Simple Calculator");
@@ -36,7 +36,7 @@ class Myframe extends JFrame implements ActionListener {
         c.add(label2);
 
         t2 = new JTextField();
-        t2.setBounds(120, 50, 100, 20);
+        t2.setBounds(120, 50, 100, 20); 
         c.add(t2);
 
         /************************** */
@@ -53,13 +53,14 @@ class Myframe extends JFrame implements ActionListener {
         div.setBounds(200, 80, 50, 30);
         c.add(div);
 
+
         mul = new JButton("X");
         mul.setBounds(300, 80, 50, 30);
         c.add(mul);
 
         // Result Label
         Result = new JLabel("Result : ");
-        Result.setBounds(10, 120, 500, 30);
+        Result.setBounds(10 , 120, 500, 30);
         c.add(Result);
 
         Re = new JTextField();
@@ -71,42 +72,45 @@ class Myframe extends JFrame implements ActionListener {
         div.addActionListener(this);
         mul.addActionListener(this);
 
+
         setVisible(true);
 
     }
 
     public void actionPerformed(ActionEvent e) {
         try {
-            if (e.getSource() == add) {
+            if(e.getSource() == add){
                 int a = Integer.parseInt(t1.getText());
                 int b = Integer.parseInt(t2.getText());
                 int c = a + b;
                 Re.setText("  " + c);
             }
-            if (e.getSource() == minus) {
+            if(e.getSource() == minus){
                 int a = Integer.parseInt(t1.getText());
                 int b = Integer.parseInt(t2.getText());
                 int c = a - b;
                 Re.setText("  " + c);
             }
-            if (e.getSource() == div) {
+            if(e.getSource() == div){
                 int a = Integer.parseInt(t1.getText());
                 int b = Integer.parseInt(t2.getText());
                 int c = a / b;
                 Re.setText("  " + c);
             }
-            if (e.getSource() == mul) {
+            if(e.getSource() == mul){
                 int a = Integer.parseInt(t1.getText());
                 int b = Integer.parseInt(t2.getText());
                 int c = a * b;
                 Re.setText("  " + c);
             }
-
+            
         } catch (Exception e1) {
             Re.setText("Pls Enter Valid Integer");
-        } catch (ArithmeticException e2) {
-            Re.setText("ArithmeticException occur");
         }
+        // catch(ArithmeticException e2){
+        //   Re.setText("ArithmeticException occur");
+        // }
+       
 
     }
 }
@@ -115,8 +119,8 @@ public class SimpleCal {
     public static void main(String[] args) {
         // System.out.println("hello");
         Myframe frame = new Myframe();
-        // System.out.println(frame); 
-
+        // System.out.println(frame);
+        
     }
 
 }
