@@ -8,8 +8,8 @@ import SecondProject.GamePanel;
 public class index {
     public static void main(String[] args) {
         System.out.println("Snake game");
-        JFrame frame = new JFrame("Snake Game ");
-        frame.setBounds(10, 10, 900, 700);
+        JFrame frame = new JFrame("Snake Game " );
+        frame.setBounds(10, 10, 905, 700);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
