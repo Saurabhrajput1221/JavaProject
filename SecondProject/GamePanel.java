@@ -49,7 +49,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
     private Timer timer;
     private int delay = 100;
 
-    GamePanel() {
+    public GamePanel() {
         addKeyListener(this);
         setFocusable(true);
         setFocusTraversalKeysEnabled(true);
@@ -80,6 +80,12 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
         g.setColor(Color.white);
         g.drawRect(24, 10, 851, 55);
         g.drawRect(24, 74, 851, 576);
+
+        g.setColor(Color.WHITE);
+        g.setFont(new Font("Arial" ,Font.PLAIN,15));
+        g.drawString("Score :" + score, 750, 30);
+        g.drawString("Length :" + LengthOfSnake, 750, 50);
+        
 
         snakeTitle.paintIcon(this, g, 25, 11);
 
@@ -126,11 +132,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
             
         }
        
-        g.setColor(Color.WHITE);
-        g.setFont(new Font("Arial" ,Font.PLAIN,15));
-        g.drawString("Score :" + score, 750, 30);
-        g.drawString("Length :" + LengthOfSnake, 750, 50);
-        enemy.paintIcon(this, g, EnyX, EnyY);
+      enemy.paintIcon(this, g, EnyX, EnyY);
 
         g.dispose();
 
