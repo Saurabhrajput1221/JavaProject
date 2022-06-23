@@ -1,5 +1,4 @@
 package SecondProject;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -45,7 +44,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
     private ImageIcon rightmouth = new ImageIcon(getClass().getResource("rightmouth.png"));
     private ImageIcon snakeimage = new ImageIcon(getClass().getResource("snakeimage.png"));
     private ImageIcon upmouth = new ImageIcon(getClass().getResource("upmouth.png"));
-    private ImageIcon enemy = new ImageIcon(getClass().getResource("enemy.png"));
+    private ImageIcon enemy = new ImageIcon(getClass().getResource("enemy.jpg"));
 
     private Timer timer;
     private int delay = 100;
