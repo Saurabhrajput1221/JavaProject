@@ -1,4 +1,5 @@
 package SecondProject;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -82,10 +83,9 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
         g.drawRect(24, 74, 851, 576);
 
         g.setColor(Color.WHITE);
-        g.setFont(new Font("Arial" ,Font.PLAIN,15));
+        g.setFont(new Font("Arial", Font.PLAIN, 15));
         g.drawString("Score :" + score, 750, 30);
         g.drawString("Length :" + LengthOfSnake, 750, 50);
-        
 
         snakeTitle.paintIcon(this, g, 25, 11);
 
@@ -129,10 +129,9 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
             g.setFont(new Font("Arial", Font.PLAIN, 20));
             g.drawString("Press SPACE to Restart", 320, 350);
 
-            
         }
-       
-      enemy.paintIcon(this, g, EnyX, EnyY);
+
+        enemy.paintIcon(this, g, EnyX, EnyY);
 
         g.dispose();
 
@@ -140,7 +139,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        // snake will move from (up to down) and (right to left)
         for (int i = LengthOfSnake - 1; i > 0; i--) {
             snakeXlength[i] = snakeXlength[i - 1];
             snakeYlength[i] = snakeYlength[i - 1];
@@ -233,10 +232,10 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
         Moves = 0;
         score = 0;
         LengthOfSnake = 3;
-        left= false;
+        left = false;
         right = true;
         up = false;
-        down= false;
+        down = false;
         timer.start();
         repaint();
     }
