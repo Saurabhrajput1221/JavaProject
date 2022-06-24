@@ -1,15 +1,19 @@
 package BricksBreaker;
 
-import java.util.Timer;
 import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import javax.swing.Timer;
 
-public class Gameplay extends JPanel {
+public class Gameplay extends JPanel implements ActionListener, KeyListener {
     private boolean play = false;
     private int totalBrick = 21;
     private Timer timer;
-    private int delay = 8;
+    private int delay = 80;
     private int ballpoX = 120;
     private int ballpoY = 350;
     private int ballXdir = 1;
@@ -17,7 +21,12 @@ public class Gameplay extends JPanel {
     private int playerX = 350;
 
     public Gameplay() {
+        addKeyListener(this);
+        setFocusable(true);
+        setFocusTraversalKeysEnabled(true);
 
+        timer = new Timer(delay, this);
+        timer.start();
     }
 
     @Override
@@ -36,6 +45,61 @@ public class Gameplay extends JPanel {
         // ball
         g.setColor(Color.RED);
         g.fillOval(ballpoX, ballpoY, 20, 20);
+
+    }
+
+    private void moveleft() {
+        play = true;
+        playerX -= 20;
+    }
+
+    private void moveRight() {
+        play =true;
+        playerX += 20;
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            if(playerX <=0){
+                playerX = 0;
+            }else{
+                moveleft();
+            }
+            // System.out.println(e.getKeyCode() + "hello ");
+        }
+
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            moveRight();
+            if(playerX>=600){
+                playerX = 600;
+            }else{
+                repaint();
+            }
+        }
+    }
+
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(play){
+
+
+            ballpoX += ballpoX;
+            ballpoY +=ballpoY;
+        }
+        repaint();
+        
+    }
+    @Override
+    public void keyTyped(KeyEvent e) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        // TODO Auto-generated method stub
 
     }
 }
