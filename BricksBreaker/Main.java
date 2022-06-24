@@ -11,7 +11,7 @@ public class Main {
         frame.setSize(700, 600);
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(false);
+        frame.setResizable(true);
 
         Gameplay panel = new Gameplay();
         frame.add(panel);

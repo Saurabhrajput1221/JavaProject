@@ -1,9 +1,6 @@
 package SecondProject;
 import java.awt.Color;
-
 import javax.swing.JFrame;
-
-import SecondProject.GamePanel;
 
 public class index {
     public static void main(String[] args) {
