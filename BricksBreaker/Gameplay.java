@@ -83,8 +83,15 @@ public class Gameplay extends JPanel implements ActionListener, KeyListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(play){
-
-
+         if(ballpoX<=0){
+             ballXdir=-ballXdir;
+         }if(ballpoX>=670){
+             ballXdir =+ ballXdir;
+         }
+         if(ballpoY<=0){
+             ballYdir=-ballYdir;
+         }
+  Rectangle ballRect = new Rectangle();
             ballpoX += ballpoX;
             ballpoY +=ballpoY;
         }
