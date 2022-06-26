@@ -202,6 +202,7 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
             right = false;
             up = false;
             down = false;
+            System.out.println("printlllllllll");
             Moves++;
         }
         if (e.getKeyCode() == KeyEvent.VK_RIGHT && (!left)) {

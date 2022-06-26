@@ -1,9 +1,9 @@
 package SimpleCal;
 
 import javax.swing.*;
-import javax.swing.plaf.LabelUI;
-import javax.swing.text.LabelView;
-import javax.xml.transform.Result;
+// import javax.swing.plaf.LabelUI;
+// import javax.swing.text.LabelView;
+// import javax.xml.transform.Result;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -115,11 +115,12 @@ class Myframe extends JFrame implements ActionListener {
     }
 }
 
+
 public class SimpleCal {
     public static void main(String[] args) {
         // System.out.println("hello");
         Myframe frame = new Myframe();
-        // System.out.println(frame);
+        System.out.println(frame);
         
     }
 
