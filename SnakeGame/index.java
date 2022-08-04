@@ -1,4 +1,6 @@
-package SecondProject;
+package SnakeGame;
+
+// package SecondProject;
 import java.awt.Color;
 import javax.swing.JFrame;
 

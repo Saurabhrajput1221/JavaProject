@@ -1,12 +1,12 @@
 
 public class practice {
-    public static void main(String[] args) {
+    public static void main(String[] ar gs) {
         System.out.println("Hello");
         // int[] snakeXlength = new int[750];
         // snakeXlength[2]= 55;
         // snakeXlength[749]= 88;
         // System.out.println(snakeXlength[2]);
-        // System.out.println(snakeXlength[749]);
+        // // System.out.println(snakeXlength[749]);
 
         int n = 34;
         int num = 0;
